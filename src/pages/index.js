@@ -1,7 +1,11 @@
 import React from "react";
 import Link from "gatsby-link";
 import Script from "react-load-script";
-import graphql from "graphql";
+
+import CodepenIcon from '../img/icons/codepen.svg';
+import GithubIcon from '../img/icons/github.svg';
+import LinkedinIcon from '../img/icons/linkedin.svg';
+import TwitterIcon from '../img/icons/twitter.svg';
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
@@ -19,38 +23,32 @@ export default class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <section className="section">
+      <section className="page is-bullseye">
+        <div className="box">
+          <h1 className="page-title">Cliff Pyles</h1>
+          <p className="page-subtitle">Hello, I build stuff for the web.</p>
+          <div className="socials">
+            <a href="//codepen.io/cliffpyles">
+              <CodepenIcon />
+            </a>
+            <a href="//github.com/cliffpyles">
+              <GithubIcon />
+            </a>
+            <a href="//linkedin.com/in/cliffpyles">
+              <LinkedinIcon />
+            </a>
+            <a href="//twitter.com/cliffpyles">
+              <TwitterIcon />
+            </a>
+          </div>
+        </div>
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={() => this.handleScriptLoad()}
         />
-        <div className="container">
-
-
-        </div>
       </section>
     );
   }
 }
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`;

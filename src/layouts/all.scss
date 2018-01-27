@@ -1,0 +1,66 @@
+$lapisLazuli: #1966A0 !default;
+$deepSpaceSparkle: #4C5C68 !default;
+$outerSpace: #46494C !default;
+$lavendarGray: #C5C3C6 !default;
+$gainsboro: #DCDCDD !default;
+$trueWhite: #ffffff !default;
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  // font-family: Futura;
+  font-family: futura-pt,sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.page {
+  width: 100vw;
+  height: 100vh;
+  &.is-bullseye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.box {
+  margin-top: -25vh;
+  text-align: center;
+}
+.page-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  color: $lapisLazuli;
+}
+.page-subtitle {
+  margin-bottom: 1.5em;
+  color: darken($lapisLazuli, 12%);
+}
+.socials {
+  // $socials--Color: rgba(0, 0, 0, 0.75);
+  $socials--Color: darken($lapisLazuli, 24%);
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: $socials--Color;
+  fill: $socials--Color;
+
+  a {
+    margin: 0 0.25em;
+    transition: 0.2s all ease-in-out;
+  }
+  a:hover {
+    opacity: 0.75;
+  }
+  svg {
+    font-size: 1.5rem;
+    color: $socials--Color;
+    fill: $socials--Color;
+  }
+}

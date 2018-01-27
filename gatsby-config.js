@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Cliff Pyles',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -33,5 +33,13 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        dir: `${__dirname}/src/img/icons`,
+        icon: true,
+        viewBox: true
+      }
+    }
   ],
 };
