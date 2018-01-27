@@ -39,7 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   color: $lapisLazuli;
 }
 .page-subtitle {
-  margin-bottom: 1.5em;
+  font-size: 1.5rem;
+  margin-bottom: 1.25em;
   color: darken($lapisLazuli, 12%);
 }
 .socials {
@@ -47,19 +48,20 @@ h1, h2, h3, h4, h5, h6 {
   $socials--Color: darken($lapisLazuli, 24%);
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: $socials--Color;
   fill: $socials--Color;
 
   a {
-    margin: 0 0.25em;
+    margin: 0 0.75em;
+    opacity: 0.5;
     transition: 0.2s all ease-in-out;
   }
   a:hover {
     opacity: 0.75;
   }
   svg {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: $socials--Color;
     fill: $socials--Color;
   }
